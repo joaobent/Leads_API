@@ -10,6 +10,14 @@ const Cadastro = () => {
   const [sucesso, setSucesso] = useState("");
   const [carregando, setCarregando] = useState(false);
 
+  const handletelefoneChange = (e) => {
+    let value = e.target.value.replace(/\D/g, ""); // Remove tudo que não for número
+    if (value.length > 2) {
+      value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}${value.length > 7 ? "-" + value.slice(7, 11) : ""}`;
+    }
+    setTelefone(value); // Atualiza o estado com o valor formatado
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setCarregando(true);
@@ -35,7 +43,6 @@ const Cadastro = () => {
         throw new Error("Erro ao cadastrar usuário!");
       }
 
-    
       const contentType = res.headers.get("Content-Type");
 
       if (contentType && contentType.includes("application/json")) {
@@ -46,7 +53,6 @@ const Cadastro = () => {
         setSucesso("Usuário cadastrado com sucesso");
       }
 
-      
       setNome("");
       setEmail("");
       setTelefone("");
@@ -98,7 +104,7 @@ const Cadastro = () => {
             id="telefone"
             placeholder="(xx) xxxxx-xxxx"
             value={telefone}
-            onChange={(e) => setTelefone(e.target.value)}
+            onChange={handletelefoneChange} // Usando a função formatada
             required
             className={styles.input}
           />
