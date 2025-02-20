@@ -69,7 +69,7 @@ const Cadastro = () => {
         <h2 className={styles.h2}>Cadastro</h2>
 
         {erro && <p className={styles.error}>{erro}</p>}
-        {sucesso && <p className={styles.success}>{sucesso}</p>}
+        {sucesso && <p className={styles.success}>{sucesso}</p>} {/* Mensagem de sucesso estilizada */}
 
         <div className={styles.inputGroup}>
           <label htmlFor="nome">Nome</label>
