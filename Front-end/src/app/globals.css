@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  background-image: url('/img/akame.gif'); /* Substitua pelo caminho do seu GIF */
+  background-size: cover; /* Faz o GIF cobrir toda a tela */
+  background-position: center; /* Centraliza o GIF */
+  background-repeat: no-repeat; /* Evita repetição do GIF */
+  background-attachment: fixed; /* Mantém o GIF fixo ao rolar a página */
+}
