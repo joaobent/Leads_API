@@ -50,7 +50,7 @@ const Cadastro = () => {
         setSucesso("Usuário cadastrado com sucesso!");
         console.log("Usuário cadastrado", data);
       } else {
-        setSucesso("Usuário cadastrado com sucesso");
+        setSucesso("Usuário cadastrado com sucesso!");
       }
 
       setNome("");
