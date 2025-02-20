@@ -26,7 +26,7 @@ app.post('/usuarios', async (req, res) => {
 
   
   if (!validarNome(nome)) {
-    return res.status(400).json({ error: 'O nome é obrigatório e deve ter pelo menos 2 caracteres.' });
+    return res.status(400).json({ error: 'O nome é obrigatório e deve ter pelo menos 2 caracteres do Alfabeto. ' });
   }
 
   if (!validarEmail(email)) {

@@ -40,7 +40,9 @@ const Cadastro = () => {
       });
 
       if (!res.ok) {
-        throw new Error("Erro ao cadastrar usuário!");
+        throw new Error("Erro ao cadastrar usuário! Confira se você digitou corretamente os dados nos campos ");
+        
+        
       }
 
       const contentType = res.headers.get("Content-Type");
